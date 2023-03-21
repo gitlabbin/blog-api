@@ -23,7 +23,7 @@ A simple rest api to combine users and posts in blog application.
 java -jar target/blog-api-1.0.0-SNAPSHOT.jar
 ```
 
-Alternatively, you can run the app without packaging it using -
+Alternatively, you can run the app without packaging it using
 
 ```bash
 ./mvnw spring-boot:run
@@ -52,6 +52,3 @@ api.post.url=https://jsonplaceholder.typicode.com/posts
 fixedDelay.input=120000     # 2 minutes
 initialDelay.input=2000     # 2 seconds
 ```
-
-## Questions and Comments 
- Brian Chen <https://github.com/gitlabbin>
