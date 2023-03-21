@@ -3,6 +3,17 @@ Blog admin API on SpringBoot
 
 A simple rest api to combined users and posts in blog application.
 
+### Service Component Flow
+
+    BlogController
+            --> ContentRepository (Users json)
+            --> ContentScheduler --> ContentPublisher          |
+                                            --> UserSvcImpl    |--> ContentRepository (Users json)
+                                            --> PostSvcImpl    |
+
+
+
+
 ## Steps to Run
 
 **. Build and run the app using maven**
@@ -38,8 +49,8 @@ api.user.url=https://jsonplaceholder.typicode.com/users
 api.post.url=https://jsonplaceholder.typicode.com/posts
 
 # Scheduler
-fixedDelay.input=120000
-initialDelay.input=2000
+fixedDelay.input=120000     # 2 minutes
+initialDelay.input=2000     # 2 seconds
 ```
 
 ## Questions and Comments 

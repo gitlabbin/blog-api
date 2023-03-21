@@ -51,7 +51,7 @@ public class ContentPublisher {
       if (users.size() > 0) {
         ObjectMapper mapper = new ObjectMapper();
         byte[] jsonStr = mapper.writeValueAsBytes(users);
-        ContentRepo.putContent(jsonStr);
+        ContentRepository.putContent(jsonStr);
 
         LOG.debug(new String(jsonStr));
       }

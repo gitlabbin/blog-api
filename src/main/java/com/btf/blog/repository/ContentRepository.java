@@ -6,8 +6,8 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class ContentRepo {
-  private static final Logger LOG = LoggerFactory.getLogger(ContentRepo.class);
+public class ContentRepository {
+  private static final Logger LOG = LoggerFactory.getLogger(ContentRepository.class);
   private static final String GREEN = "GREEN";
   private static final String BLUE = "BLUE";
   private static AtomicBoolean IS_GREEN_SERVE = new AtomicBoolean(false);

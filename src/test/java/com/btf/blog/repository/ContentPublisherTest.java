@@ -25,7 +25,7 @@ public class ContentPublisherTest {
   public void process() {
     publisher.process();
 
-    Assertions.assertThat(ContentRepo.getContent().length).isGreaterThan(0);
+    Assertions.assertThat(ContentRepository.getContent().length).isGreaterThan(0);
   }
 
   @Test
@@ -33,7 +33,7 @@ public class ContentPublisherTest {
     publisher.process();
     ObjectMapper mapper = new ObjectMapper();
     try {
-      User[] users = mapper.readValue(ContentRepo.getContent(), User[].class);
+      User[] users = mapper.readValue(ContentRepository.getContent(), User[].class);
 
       Assert.assertEquals(10, users.length);
       Assertions.assertThat(users[0].getPosts().size()).isGreaterThan(0);

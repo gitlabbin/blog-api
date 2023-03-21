@@ -1,6 +1,6 @@
 package com.btf.blog;
 
-import com.btf.blog.repository.ContentRepo;
+import com.btf.blog.repository.ContentRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +12,7 @@ public class BlogController {
 
   @RequestMapping(value = "/users", produces = "application/json")
   public ResponseEntity<?> processWith() {
-    byte[] bytes = ContentRepo.getContent();
+    byte[] bytes = ContentRepository.getContent();
 
     if (null == bytes) {
       return new ResponseEntity<>(NO_CONTENT, HttpStatus.OK);

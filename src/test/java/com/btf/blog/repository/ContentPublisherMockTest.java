@@ -54,9 +54,9 @@ public class ContentPublisherMockTest {
     // Act
     publisher.process();
     // Assert
-    Assertions.assertThat(ContentRepo.getContent().length).isGreaterThan(0);
+    Assertions.assertThat(ContentRepository.getContent().length).isGreaterThan(0);
     try {
-      User[] users = mapper.readValue(ContentRepo.getContent(), User[].class);
+      User[] users = mapper.readValue(ContentRepository.getContent(), User[].class);
 
       assertEquals(10, users.length);
       Assertions.assertThat(users[0].getPosts().size()).isGreaterThan(0);

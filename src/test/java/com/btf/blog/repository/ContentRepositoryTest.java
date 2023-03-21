@@ -9,7 +9,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class ContentRepoTest {
+public class ContentRepositoryTest {
 
   private ObjectMapper mapper = new ObjectMapper();
 
@@ -19,10 +19,10 @@ public class ContentRepoTest {
         getClass().getClassLoader().getResourceAsStream("users_full.json")) {
       User[] users = mapper.readValue(inStream, User[].class);
       byte[] jsonStr = mapper.writeValueAsBytes(users);
-      ContentRepo.putContent(jsonStr);
-      Assertions.assertThat(ContentRepo.getContent().length).isGreaterThan(0);
+      ContentRepository.putContent(jsonStr);
+      Assertions.assertThat(ContentRepository.getContent().length).isGreaterThan(0);
 
-      User[] newUsers = mapper.readValue(ContentRepo.getContent(), User[].class);
+      User[] newUsers = mapper.readValue(ContentRepository.getContent(), User[].class);
       Assert.assertEquals(10, newUsers.length);
       Assertions.assertThat(newUsers[0].getPosts().size()).isGreaterThan(0);
     } catch (IOException e) {
