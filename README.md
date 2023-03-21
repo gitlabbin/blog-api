@@ -1,15 +1,15 @@
 Blog admin API on SpringBoot
 ----------------------------
 
-A simple rest api to combined users and posts in blog application.
+A simple rest api to combine users and posts in blog application.
 
 ### Service Component Flow
 
     BlogController
             --> ContentRepository (Users json)
-            --> ContentScheduler --> ContentPublisher          |
-                                            --> UserSvcImpl    |--> ContentRepository (Users json)
-                                            --> PostSvcImpl    |
+            --> ContentScheduler --> ContentPublisher              |
+                                            --> UserServiceImpl    |--> ContentRepository (Users json)
+                                            --> PostServiceImpl    |
 
 
 

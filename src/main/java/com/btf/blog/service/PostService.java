@@ -4,6 +4,6 @@ import com.btf.blog.model.Post;
 
 import java.util.List;
 
-public interface PostSvc {
+public interface PostService {
   List<Post> getPosts();
 }

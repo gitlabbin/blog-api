@@ -1,8 +1,8 @@
 package com.btf.blog.repository;
 
 import com.btf.blog.model.Post;
-import com.btf.blog.service.PostSvc;
-import com.btf.blog.service.UserSvc;
+import com.btf.blog.service.PostService;
+import com.btf.blog.service.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.btf.blog.model.User;
@@ -19,11 +19,11 @@ import java.util.stream.Collectors;
 public class ContentPublisher {
   private static final Logger LOG = LoggerFactory.getLogger(ContentPublisher.class);
 
-  @Autowired private PostSvc postService;
+  @Autowired private PostService postService;
 
-  @Autowired private UserSvc userService;
+  @Autowired private UserService userService;
 
-  public ContentPublisher(PostSvc postService, UserSvc userService) {
+  public ContentPublisher(PostService postService, UserService userService) {
     this.postService = postService;
     this.userService = userService;
   }

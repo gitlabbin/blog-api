@@ -2,8 +2,8 @@ package com.btf.blog.repository;
 
 import com.btf.blog.model.Post;
 import com.btf.blog.model.User;
-import com.btf.blog.service.PostSvc;
-import com.btf.blog.service.UserSvc;
+import com.btf.blog.service.PostService;
+import com.btf.blog.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.assertj.core.api.Assertions;
@@ -26,9 +26,9 @@ public class ContentPublisherMockTest {
 
   @InjectMocks ContentPublisher publisher;
 
-  @Mock private PostSvc postServiceMock;
+  @Mock private PostService postServiceMock;
 
-  @Mock private UserSvc userServiceMock;
+  @Mock private UserService userServiceMock;
 
   private ObjectMapper mapper = new ObjectMapper();
   List<User> users;

@@ -13,8 +13,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class UserApiImplTest {
-  @Autowired private UserSvc apiService;
+public class UserServiceImplTest {
+  @Autowired private UserService apiService;
 
   @Value("${user.limit}")
   private Integer USER_LIMIT;

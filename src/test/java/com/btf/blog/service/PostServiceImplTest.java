@@ -13,8 +13,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class PostSvcImplTest {
-  @Autowired private PostSvc apiService;
+public class PostServiceImplTest {
+  @Autowired private PostService apiService;
 
   @Value("${post.limit}")
   private Integer POST_LIMIT;

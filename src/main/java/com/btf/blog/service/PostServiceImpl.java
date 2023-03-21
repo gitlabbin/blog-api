@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Service
-public class PostSvcImpl implements PostSvc {
+public class PostServiceImpl implements PostService {
   @Autowired private RestTemplate restTemplate;
 
   // inject value from application.properties

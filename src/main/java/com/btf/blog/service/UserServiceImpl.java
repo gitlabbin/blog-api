@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @Service
-public class UserSvcImpl implements UserSvc {
+public class UserServiceImpl implements UserService {
   @Autowired private RestTemplate restTemplate;
 
   // inject value from application.properties
