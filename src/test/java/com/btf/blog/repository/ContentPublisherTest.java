@@ -15,7 +15,7 @@ import java.io.IOException;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class ContentPublisherIntegrateTest {
+public class ContentPublisherTest {
   @Autowired private ContentPublisher publisher;
 
   @Before
